@@ -114,6 +114,7 @@ void Epf::run(ProgressWriter& progress)
         { return f1.numPoints > f2.numPoints; });
 
     progress.m_threshold = progress.m_total / 40;
+    if (!progress.m_threshold) progress.m_threshold = 1;
     progress.setIncrement(.01);
     progress.m_current = 0;
 
